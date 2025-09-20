@@ -8,7 +8,16 @@
 			"Name": "Ganymede",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "GanymedeAbilitySystem",
+			"Type": "Runtime"
 		}
 	],
-	"Plugins": []
+	"Plugins": [
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		}
+	]
 }

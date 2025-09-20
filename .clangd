@@ -85,7 +85,7 @@ CompileFlags:
 InlayHints:
   Enabled: Yes
   DeducedTypes: Yes
-  ParameterNames: Yes
+  ParameterNames: No
   Designators: Yes
 Diagnostics:
   UnusedIncludes: None
