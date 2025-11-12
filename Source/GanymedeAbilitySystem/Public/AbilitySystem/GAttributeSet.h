@@ -12,7 +12,6 @@
 
 /**
  * Attribute set for Ganymede, intended for any actor.
- * Handles health, stamina, and mana.
  */
 UCLASS()
 class GANYMEDEABILITYSYSTEM_API UGAttributeSet : public UAttributeSet
@@ -35,6 +34,11 @@ public:
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = "OnRep_MaxHealth", Category = "Ability | Gameplay Attribute")
 	FGameplayAttributeData MaxHealth;
 	ATTRIBUTE_ACCESSORS_BASIC(UGAttributeSet, MaxHealth)
+
+	/** Health regen rate, in points/second */
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = "OnRep_HealthRegenRate", Category = "Ability | Gameplay Attribute")
+	FGameplayAttributeData HealthRegenRate;
+	ATTRIBUTE_ACCESSORS_BASIC(UGAttributeSet, HealthRegenRate)
 
 	/**
 	 * Meta attribute to subtract from health.
@@ -96,6 +100,10 @@ protected:
 	/** Replicate max health */
 	UFUNCTION()
 	virtual void OnRep_MaxHealth(const FGameplayAttributeData& OldMaxHealth) const;
+
+	/** Replicate health regen rate */
+	UFUNCTION()
+	virtual void OnRep_HealthRegenRate(const FGameplayAttributeData& OldHealthRegenRate) const;
 
 	/** Replicate stamina */
 	UFUNCTION()

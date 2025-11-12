@@ -21,6 +21,7 @@ void UGAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
 
 	DOREPLIFETIME_CONDITION_NOTIFY(UGAttributeSet, Health, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UGAttributeSet, MaxHealth, COND_None, REPNOTIFY_Always);
+	DOREPLIFETIME_CONDITION_NOTIFY(UGAttributeSet, HealthRegenRate, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UGAttributeSet, Stamina, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UGAttributeSet, MaxStamina, COND_None, REPNOTIFY_Always);
 	DOREPLIFETIME_CONDITION_NOTIFY(UGAttributeSet, StaminaRegenRate, COND_None, REPNOTIFY_Always);
@@ -163,6 +164,11 @@ void UGAttributeSet::OnRep_Health(const FGameplayAttributeData& OldHealth) const
 void UGAttributeSet::OnRep_MaxHealth(const FGameplayAttributeData& OldMaxHealth) const
 {
 	GAMEPLAYATTRIBUTE_REPNOTIFY(UGAttributeSet, MaxHealth, OldMaxHealth);
+}
+
+void UGAttributeSet::OnRep_HealthRegenRate(const FGameplayAttributeData& OldHealthRegenRate) const
+{
+	GAMEPLAYATTRIBUTE_REPNOTIFY(UGAttributeSet, MaxHealth, OldHealthRegenRate);
 }
 
 void UGAttributeSet::OnRep_Stamina(const FGameplayAttributeData& OldStamina) const
