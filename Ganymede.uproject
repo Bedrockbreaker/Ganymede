@@ -12,6 +12,10 @@
 		{
 			"Name": "GanymedeAbilitySystem",
 			"Type": "Runtime"
+		},
+		{
+			"Name": "GanymedeSpellSystem",
+			"Type": "Runtime"
 		}
 	],
 	"Plugins": [
