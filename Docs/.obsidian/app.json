@@ -1,0 +1,11 @@
+{
+  "spellcheck": false,
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "userIgnoreFilters": [
+    "Templates/"
+  ],
+  "showInlineTitle": false,
+  "alwaysUpdateLinks": true
+}

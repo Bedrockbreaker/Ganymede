@@ -1,0 +1,278 @@
+{
+  "main": {
+    "id": "655992c95daca5b9",
+    "type": "split",
+    "children": [
+      {
+        "id": "3d9f8de0dc959d3b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abe15d4fb81a937b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spell System/Example Spells/GravityWell2.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "GravityWell2"
+            }
+          },
+          {
+            "id": "8f106772a53155f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spell System/Example Spells/GravityWell.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "GravityWell"
+            }
+          },
+          {
+            "id": "b6906b7a78b155ee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Spell System/Example Spells/BlinkAnchor2.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "BlinkAnchor2"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dbfe451c0709b8c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "13ed6d961fa24670",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6b60b7e60d88603",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "269fff44c0afe0dc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3b6c21d8cf7b0de1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3ddb970057404b25",
+    "type": "split",
+    "children": [
+      {
+        "id": "708372fc6c587617",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a486e0f4dcd78b6b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b881531a0f79cc5f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "b3058db522500d22",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a39839bc51d2be08",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "a9213b2f68b4a0b9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": true,
+      "daily-notes:Open today's daily note": true,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "b6906b7a78b155ee",
+  "lastOpenFiles": [
+    "Spell System/Example Spells/GravityWell2.md",
+    "Spell System/Example Spells/GravityWell.md",
+    "Spell System/Example Spells/BlinkAnchor2.md",
+    "Spell System/Deliveries/CapsuleTrace.md",
+    "Spell System/Example Spells/BlinkAnchor.md",
+    "Spell System/Example Spells/RespawnBeacon.md",
+    "Spell System/Example Spells/Blink.md",
+    "Spell System/Example Spells/MagicMissile.md",
+    "Spell System/Example Spells/PulseShock.md",
+    "Spell System/Example Spells/Singularity.md",
+    "Spell System/Example Spells/QuantumSwap.md",
+    "Spell System/Example Spells/Reverberation.md",
+    "Spell System/Example Spells/BlindMine.md",
+    "Spell System/Example Spells/KineticBolt.md",
+    "Spell System/Example Spells/PhaseLattice.md",
+    "Spell System/Example Spells/Paralysis.md",
+    "Spell System/Example Spells/Overdraw.md",
+    "Spell System/Example Spells/Obfuscate.md",
+    "Spell System/Example Spells/NeutralDensityFilter.md",
+    "Spell System/Spell System Overview.md",
+    "Spell System/Example Spells/Transference.md",
+    "Spell System/Example Spells/LastStand.md",
+    "Spell System/Example Spells/LastThought.md",
+    "Spell System/SpellContext.md",
+    "Spell System/Example Spells",
+    "Spell System/SpellData.md",
+    "Spell System/SpellAbility.md",
+    "Spell System/Deliveries",
+    "Spell System/Overview.svg",
+    "Spell System",
+    "Templates"
+  ]
+}
