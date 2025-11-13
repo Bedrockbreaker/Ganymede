@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class GanymedePlayerFramework : ModuleRules
+public class CombatSystem : ModuleRules
 {
-	public GanymedePlayerFramework(ReadOnlyTargetRules Target) : base(Target)
+	public CombatSystem(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 

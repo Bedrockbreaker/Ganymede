@@ -12,6 +12,10 @@
 		{
 			"Name": "GanymedeAbilitySystem",
 			"Type": "Runtime"
+		},
+		{
+			"Name": "CombatSystem",
+			"Type": "Runtime"
 		}
 	],
 	"Plugins": [

@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 
-class FGanymedePlayerFrameworkModule : public IModuleInterface
+class FCombatSystemModule : public IModuleInterface
 {
 public:
 	virtual void StartupModule() override {};
