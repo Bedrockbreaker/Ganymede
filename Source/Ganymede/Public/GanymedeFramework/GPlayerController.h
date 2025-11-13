@@ -19,6 +19,7 @@ public:
 
 protected:
 	/** Input Mapping Contexts */
+	UPROPERTY(EditAnywhere, Category = "Input|Input Mappings")
 	TArray<UInputMappingContext*> DefaultMappingContexts;
 
 	virtual void SetupInputComponent() override;

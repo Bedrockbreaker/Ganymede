@@ -47,6 +47,8 @@ Content/*
 !Content/Collections/
 !Content/Developers/
 !Content/Ganymede/
+Content/Ganymede/Art/Characters/Trooper_05/*
+Content/Ganymede/Art/Characters/Wraith/*
 !Content/GanymedeEditor/
 
 # User-specific files
