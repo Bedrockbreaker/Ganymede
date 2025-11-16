@@ -16,11 +16,4 @@ class GANYMEDE_API AGPlayerController : public APlayerController
 
 public:
 	AGPlayerController();
-
-protected:
-	/** Input Mapping Contexts */
-	UPROPERTY(EditAnywhere, Category = "Input|Input Mappings")
-	TArray<UInputMappingContext*> DefaultMappingContexts;
-
-	virtual void SetupInputComponent() override;
 };

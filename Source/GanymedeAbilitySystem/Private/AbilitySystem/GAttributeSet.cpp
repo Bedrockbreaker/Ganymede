@@ -6,7 +6,7 @@
 #include "GameFramework/Controller.h"
 #include "GameplayEffectExtension.h"
 #include "GanymedeAbilitySystem.h"
-#include "GanymedeFramework/GAbilityCharacter.h"
+// #include "GanymedeFramework/GAbilityCharacter.h"
 #include "Net/UnrealNetwork.h"
 
 UGAttributeSet::UGAttributeSet()
@@ -36,44 +36,44 @@ void UGAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackD
 
 	// Gather data about the source of the gameplay effect
 
-	FGameplayEffectContextHandle Context = Data.EffectSpec.GetContext();
-	UAbilitySystemComponent*	 SourceASC = Context.GetOriginalInstigatorAbilitySystemComponent();
-	const FGameplayTagContainer& SourceTags = *Data.EffectSpec.CapturedSourceTags.GetAggregatedTags();
-	FGameplayTagContainer		 SpecAssetTags;
-	Data.EffectSpec.GetAllAssetTags(SpecAssetTags);
+	// FGameplayEffectContextHandle Context = Data.EffectSpec.GetContext();
+	// UAbilitySystemComponent*	 SourceASC = Context.GetOriginalInstigatorAbilitySystemComponent();
+	// const FGameplayTagContainer& SourceTags = *Data.EffectSpec.CapturedSourceTags.GetAggregatedTags();
+	// FGameplayTagContainer		 SpecAssetTags;
+	// Data.EffectSpec.GetAllAssetTags(SpecAssetTags);
 
-	AActor*				SourceActor = nullptr;
-	AController*		SourceController = nullptr;
-	AGAbilityCharacter* SourceCharacter = nullptr;
-	if (SourceASC && SourceASC->AbilityActorInfo.IsValid() && SourceASC->AbilityActorInfo->AvatarActor.IsValid())
-	{
-		SourceActor = SourceASC->AbilityActorInfo->AvatarActor.Get();
-		SourceController = SourceASC->AbilityActorInfo->PlayerController.Get();
-		if (!SourceController && SourceActor)
-		{
-			APawn* Pawn = Cast<APawn>(SourceActor);
-			if (Pawn) SourceController = Pawn->GetController();
-		}
+	// AActor*				SourceActor = nullptr;
+	// AController*		SourceController = nullptr;
+	// AGAbilityCharacter* SourceCharacter = nullptr;
+	// if (SourceASC && SourceASC->AbilityActorInfo.IsValid() && SourceASC->AbilityActorInfo->AvatarActor.IsValid())
+	// {
+	// 	SourceActor = SourceASC->AbilityActorInfo->AvatarActor.Get();
+	// 	SourceController = SourceASC->AbilityActorInfo->PlayerController.Get();
+	// 	if (!SourceController && SourceActor)
+	// 	{
+	// 		APawn* Pawn = Cast<APawn>(SourceActor);
+	// 		if (Pawn) SourceController = Pawn->GetController();
+	// 	}
 
-		SourceCharacter = SourceController ? Cast<AGAbilityCharacter>(SourceController->GetPawn())
-										   : Cast<AGAbilityCharacter>(SourceActor);
+	// 	SourceCharacter = SourceController ? Cast<AGAbilityCharacter>(SourceController->GetPawn())
+	// 									   : Cast<AGAbilityCharacter>(SourceActor);
 
-		if (Context.GetEffectCauser()) SourceActor = Context.GetEffectCauser();
-	}
+	// 	if (Context.GetEffectCauser()) SourceActor = Context.GetEffectCauser();
+	// }
 
-	// Gather data about the target (the owner of this attribute set instance)
+	// // Gather data about the target (the owner of this attribute set instance)
 
-	UAbilitySystemComponent* TargetASC = GetOwningAbilitySystemComponent();
+	// UAbilitySystemComponent* TargetASC = GetOwningAbilitySystemComponent();
 
-	AActor*				TargetActor = nullptr;
-	AController*		TargetController = nullptr;
-	AGAbilityCharacter* TargetCharacter = nullptr;
-	if (Data.Target.AbilityActorInfo.IsValid() && Data.Target.AbilityActorInfo->AvatarActor.IsValid())
-	{
-		TargetActor = Data.Target.AbilityActorInfo->AvatarActor.Get();
-		TargetController = Data.Target.AbilityActorInfo->PlayerController.Get();
-		TargetCharacter = Cast<AGAbilityCharacter>(TargetActor);
-	}
+	// AActor*				TargetActor = nullptr;
+	// AController*		TargetController = nullptr;
+	// AGAbilityCharacter* TargetCharacter = nullptr;
+	// if (Data.Target.AbilityActorInfo.IsValid() && Data.Target.AbilityActorInfo->AvatarActor.IsValid())
+	// {
+	// 	TargetActor = Data.Target.AbilityActorInfo->AvatarActor.Get();
+	// 	TargetController = Data.Target.AbilityActorInfo->PlayerController.Get();
+	// 	TargetCharacter = Cast<AGAbilityCharacter>(TargetActor);
+	// }
 
 	// Evaluate the gameplay effect
 
@@ -107,7 +107,7 @@ void UGAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackD
 			DamageInfo.ModifierOp = EGameplayModOp::Additive;
 			DamageInfo.ModifierMagnitude = FScalableFloat(RemainingCost);
 
-			TargetASC->ApplyGameplayEffectToSelf(DamageGE, 1.0f, TargetASC->MakeEffectContext());
+			// TargetASC->ApplyGameplayEffectToSelf(DamageGE, 1.0f, TargetASC->MakeEffectContext());
 		}
 	}
 	else if (Data.EvaluatedData.Attribute == GetDamageAttribute())
@@ -120,26 +120,24 @@ void UGAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackD
 		{
 			bool bAliveBeforeDamage = true;
 
-			if (TargetCharacter) bAliveBeforeDamage = TargetCharacter->IsAlive();
+			// if (TargetCharacter) bAliveBeforeDamage = TargetCharacter->IsAlive();
 
-			if (!TargetCharacter->IsAlive())
-			{
-				UE_LOG(
-					LogGanymedeAbilitySystem,
-					Warning,
-					TEXT("%s is not alive when taking damage"),
-					*TargetCharacter->GetName());
-			}
+			// if (!TargetCharacter->IsAlive())
+			// {
+			// 	UE_LOG(
+			// 		LogGanymedeAbilitySystem,
+			// 		Warning,
+			// 		TEXT("%s is not alive when taking damage"),
+			// 		*TargetCharacter->GetName());
+			// }
 
-			SetHealth(FMath::Clamp(GetHealth() - DamageDone, 0.0f, GetMaxHealth()));
+			// SetHealth(FMath::Clamp(GetHealth() - DamageDone, 0.0f, GetMaxHealth()));
 
-			if (TargetCharacter && bAliveBeforeDamage)
-			{
-				UE_LOG(
-					LogGanymedeAbilitySystem, Log, TEXT("%s took %f damage"), *TargetCharacter->GetName(), DamageDone);
-
-				// TODO: Play damage cue notification for hit/death
-			}
+			// if (TargetCharacter && bAliveBeforeDamage)
+			// {
+			// 	UE_LOG(
+			// 		LogGanymedeAbilitySystem, Log, TEXT("%s took %f damage"), *TargetCharacter->GetName(), DamageDone);
+			// }
 		}
 	}
 	else if (Data.EvaluatedData.Attribute == GetHealthAttribute())

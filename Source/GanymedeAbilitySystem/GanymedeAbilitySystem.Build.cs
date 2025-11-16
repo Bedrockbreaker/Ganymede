@@ -13,13 +13,11 @@ public class GanymedeAbilitySystem : ModuleRules
 			"CoreUObject",
 			"Engine",
 
-			"Ganymede"
-		});
-
-		PrivateDependencyModuleNames.AddRange(new string[] {
 			"GameplayAbilities",
 			"GameplayTags",
-			"GameplayTasks"
+			"GameplayTasks",
+
+			"Ganymede"
 		});
 	}
 }

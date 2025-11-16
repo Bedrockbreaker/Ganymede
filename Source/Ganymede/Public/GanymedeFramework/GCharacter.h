@@ -7,11 +7,12 @@
 #include "GCharacter.generated.h"
 
 class UCameraComponent;
+class UGInputModeManagerComponent;
 class UInputAction;
 class USkeletalMeshComponent;
 struct FInputActionValue;
 
-DECLARE_LOG_CATEGORY_EXTERN(LogGCharacter, Log, All);
+GANYMEDE_API DECLARE_LOG_CATEGORY_EXTERN(LogGCharacter, Log, All);
 
 /**
  * Base character for Ganymede. Handles character movement, etc.
@@ -22,7 +23,7 @@ class GANYMEDE_API AGCharacter : public ACharacter
 	GENERATED_BODY()
 
 public:
-	AGCharacter();
+	AGCharacter(const FObjectInitializer& ObjectInitializer);
 
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
 
@@ -53,7 +54,7 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
-	// TODO: Replace with just a socket. Have the CamaeraManager attach the camera instead.
+	// TODO: Replace with just a socket. Have the CameraManager attach the camera instead.
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = true))
 	TObjectPtr<UCameraComponent> FirstPersonCameraComponent;
@@ -61,4 +62,8 @@ private:
 	/** First person mesh */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = true))
 	TObjectPtr<USkeletalMeshComponent> FirstPersonMesh;
+
+	/** Handles input modes */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = true))
+	TObjectPtr<UGInputModeManagerComponent> InputModeManagerComponent;
 };

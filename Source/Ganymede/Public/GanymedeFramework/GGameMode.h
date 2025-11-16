@@ -7,7 +7,7 @@
 
 /** Default game mode for Ganymede. Does not contain rules for actual gameplay. */
 UCLASS(Abstract)
-class AGGameMode : public AGameModeBase
+class GANYMEDE_API AGGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 

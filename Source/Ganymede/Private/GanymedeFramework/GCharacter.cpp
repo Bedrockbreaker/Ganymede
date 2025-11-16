@@ -4,18 +4,21 @@
 
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/GInputModeManagerComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "EnhancedInputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/PlayerController.h"
+#include "GInputModeBlueprintLibrary.h"
+#include "GInputModeProvider.h"
 #include "InputActionValue.h"
 
 DEFINE_LOG_CATEGORY(LogGCharacter);
 
-AGCharacter::AGCharacter()
+AGCharacter::AGCharacter(const FObjectInitializer& ObjectInitializer)
 {
-	GetCapsuleComponent()->InitCapsuleSize(34.0f, 96.0f);
+	InputModeManagerComponent = CreateDefaultSubobject<UGInputModeManagerComponent>(TEXT("Input Mode Manager"));
 
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("First Person Camera"));
 	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
@@ -31,6 +34,8 @@ AGCharacter::AGCharacter()
 	FirstPersonMesh->SetOnlyOwnerSee(true);
 	FirstPersonMesh->FirstPersonPrimitiveType = EFirstPersonPrimitiveType::FirstPerson;
 	FirstPersonMesh->SetCollisionProfileName(FName("NoCollision"));
+
+	GetCapsuleComponent()->InitCapsuleSize(34.0f, 96.0f);
 
 	GetMesh()->SetOwnerNoSee(true);
 	GetMesh()->FirstPersonPrimitiveType = EFirstPersonPrimitiveType::WorldSpaceRepresentation;
@@ -64,6 +69,16 @@ void AGCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	{
 		UE_LOG(LogGCharacter, Error, TEXT("%s failed to find EnhancedInputComponent"), *GetNameSafe(this));
 		return;
+	}
+
+	if (InputModeManagerComponent)
+	{
+		for (TSoftObjectPtr<UGInputModeProvider> ProviderAsset : InputModeManagerComponent->Providers)
+		{
+			UGInputModeProvider* Provider = ProviderAsset.LoadSynchronous();
+			check(Provider);
+			InputModeManagerComponent->ActivateProvider(Provider);
+		}
 	}
 
 	EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &AGCharacter::Jump);

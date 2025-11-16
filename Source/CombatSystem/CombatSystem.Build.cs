@@ -16,7 +16,12 @@ public class CombatSystem : ModuleRules
 			"InputCore",
 			"EnhancedInput",
 
-			"Ganymede"
+			"GameplayAbilities",
+			"GameplayTags",
+			"GameplayTasks",
+
+			"Ganymede",
+			"GanymedeAbilitySystem"
 		});
 	}
 }

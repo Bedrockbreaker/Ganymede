@@ -11,19 +11,3 @@ AGPlayerController::AGPlayerController()
 {
 	PlayerCameraManagerClass = AGPlayerCameraManager::StaticClass();
 }
-
-void AGPlayerController::SetupInputComponent()
-{
-	Super::SetupInputComponent();
-
-	if (!IsLocalPlayerController()) return;
-
-	UEnhancedInputLocalPlayerSubsystem* Subsystem =
-		ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetLocalPlayer());
-	if (!Subsystem) return;
-
-	for (UInputMappingContext* CurrentContext : DefaultMappingContexts)
-	{
-		Subsystem->AddMappingContext(CurrentContext, 0);
-	}
-}

@@ -16,11 +16,12 @@ UGGameplayAbility::UGGameplayAbility()
 
 	// Default tags that prevent this ability from activating
 	ActivationBlockedTags.AddTagFast(FGameplayTag::RequestGameplayTag(FName("State.Dead")));
+	ActivationBlockedTags.AddTagFast(FGameplayTag::RequestGameplayTag(FName("State.Debuff.Stunned")));
 }
 
 void UGGameplayAbility::OnAvatarSet(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec)
 {
 	Super::OnAvatarSet(ActorInfo, Spec);
 
-	if (bActivateAbilityOnGranted) ActorInfo->AbilitySystemComponent->TryActivateAbility(Spec.Handle);
+	if (bActivateAbilityOnGranted) ActorInfo->AbilitySystemComponent->TryActivateAbility(Spec.Handle, false);
 }
