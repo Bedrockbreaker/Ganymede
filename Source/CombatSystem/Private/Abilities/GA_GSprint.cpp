@@ -68,7 +68,7 @@ void UGA_GSprint::PredictSprint()
 		Cast<UGCharacterMovementComponent>(GetActorInfo().MovementComponent.Get());
 	if (!GCharacterMovement) return;
 
-	if (GCharacterMovement->GetCurrentAcceleration().IsNearlyZero() && !GCharacterMovement->IsFalling())
+	if (!GCharacterMovement->GetCurrentAcceleration().IsNearlyZero() && !GCharacterMovement->IsFalling())
 	{
 		bool bSuccess = CommitAbilityCost(CurrentSpecHandle, CurrentActorInfo, CurrentActivationInfo);
 		if (!bSuccess)
