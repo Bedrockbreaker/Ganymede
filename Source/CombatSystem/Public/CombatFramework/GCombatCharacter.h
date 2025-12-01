@@ -24,6 +24,12 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Combat")
 	bool IsAlive() const { return AttributeSet && AttributeSet->GetHealth() > 0.0f; }
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Combat")
+	void OnStartSprint();
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Combat")
+	void OnStopSprint();
+
 	virtual void PossessedBy(AController* NewController) override;
 
 	virtual void OnRep_PlayerState() override;

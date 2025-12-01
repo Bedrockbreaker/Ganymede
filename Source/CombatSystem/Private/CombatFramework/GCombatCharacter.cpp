@@ -59,6 +59,7 @@ void AGCombatCharacter::StartSprinting(const FInputActionValue& Value)
 
 	UE_LOG(LogTemp, Warning, TEXT("Sprint Activated (input)."));
 
+	OnStartSprint();
 	AbilitySystemComponent->TryActivateAbility(SprintAbilitySpecHandle);
 }
 
@@ -69,6 +70,7 @@ void AGCombatCharacter::StopSprinting(const FInputActionValue& Value)
 
 	UE_LOG(LogTemp, Warning, TEXT("Sprint Deactivated (input)."));
 
+	OnStopSprint();
 	AbilitySystemComponent->CancelAbilityHandle(SprintAbilitySpecHandle);
 }
 
