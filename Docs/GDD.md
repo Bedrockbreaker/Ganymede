@@ -1168,7 +1168,7 @@ A point of no easy retreat created by level geometry, resource expenditure, or o
 
 **Complexity**
 
-An abstract budget representing the structural and computational cost of a spell. Total complexity limits prevent the creation of single-cast match-deciding spells that ignore survivabilty tradeoffs.
+An abstract budget representing the structural and computational cost of a spell. Total complexity limits prevent the creation of single-cast match-deciding spells that ignore survivability tradeoffs.
 
 **Component Unlock**
 
@@ -1188,7 +1188,7 @@ A non-regenerating resource representing physical survivability. Health is perma
 
 **Infrastructure Asset**
 
-A diegetic inrepretation of objectives (flags), such as data cores, mana spools, or passkeys, representing strategic control rather than symbolic trophies.
+A diegetic interpretation of objectives (flags), such as data cores, mana spools, or passkeys, representing strategic control rather than symbolic trophies.
 
 **Loadout**
 
